@@ -12,6 +12,7 @@ const POST = process.env.PORT || 3001;
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
+app.use(express.json());
 
 app.post("/post", messages.onPost);
 app.get("/userget", messages.onGet);
